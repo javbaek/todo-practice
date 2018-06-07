@@ -1,19 +1,20 @@
-function storeTodos(item) {
-  var todos = [item];
-}
+//function storeTodos(item) {
+  var todos = [];
+//}
 
-function displayTodos {
+function displayTodos() {
   console.log('My todos:', todos);
 }
 
-function addTodos {
-  push.todos();
+function addTodo(newItem) {
+  push.todos(newItem);
+  displayTodos();
 }
 
-function changeTodos(item, newItem) {
-  todos[item] = newItem;
+function changeTodo(item, changedItem) {
+  todos[item] = changedItem;
 }
 
-function deleteTodos{
-  splice.todos();
+function deleteTodos(fromItem, numberOfItems){
+  splice.todos(fromItem, numberOfItems);
 }
