@@ -12,6 +12,7 @@ function addTodo(newItem) {
 
 function changeTodo(item, changedItem) {
   todos[item] = changedItem;
+  console.log(changedItem);
 }
 
 function deleteTodos(fromItem, numberOfItems){
