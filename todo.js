@@ -1,13 +1,12 @@
-//function storeTodos(item) {
-  var todos = [];
-//}
+var todos = ['item 1'];
 
 function displayTodos() {
   console.log('My todos:', todos);
 }
 
 function addTodo(newItem) {
-  push.todos(newItem);
+  todos.push(newItem);
+  //push.todos(newItem);
   displayTodos();
 }
 
@@ -16,5 +15,6 @@ function changeTodo(item, changedItem) {
 }
 
 function deleteTodos(fromItem, numberOfItems){
-  splice.todos(fromItem, numberOfItems);
+  todos.splice(fromItem, numberOfItems);
+  displayTodos();
 }
