@@ -6,16 +6,15 @@ function displayTodos() {
 
 function addTodo(newItem) {
   todos.push(newItem);
-  //push.todos(newItem);
   displayTodos();
 }
 
-function changeTodo(item, changedItem) {
-  todos[item] = changedItem;
-  console.log(changedItem);
+function changeTodo(position, newValue) {
+  todos[position] = newValue;
+  console.log(newValue);
 }
 
-function deleteTodos(fromItem, numberOfItems){
-  todos.splice(fromItem, numberOfItems);
+function deleteTodos(position){
+  todos.splice(position, 1);
   displayTodos();
 }
