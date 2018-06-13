@@ -1,11 +1,11 @@
-var todos = ['item 1'];
+var todos = ['todo 1'];
 
 function displayTodos() {
   console.log('My todos:', todos);
 }
 
-function addTodo(newItem) {
-  todos.push(newItem);
+function addTodo(todo) {
+  todos.push(todo);
   displayTodos();
 }
 
