@@ -58,3 +58,9 @@ var todoList = {
         this.displayTodos();
     }
 };
+
+// 1. get access to display todos button
+var displayTodosButton = document.getElementById('displayTodosButton');
+console.log()
+
+// 2. run displayTodos method, when button is clicked
