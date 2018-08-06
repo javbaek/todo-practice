@@ -1,9 +1,42 @@
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
+body {
+  max-width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #DDDBCD;
+  padding: 0 0px 20px 0px;
+/*  border: 2px solid #DBDBDB; */
+  font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-family: 'Open Sans', sans-serif;
+  color: #212121;
+}
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid hsla(36, 100%, 50%, 0.1);
+}
+.titel {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px 0px;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+.buttons {
+  background-color: #2A568F;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.displayTodosButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
 }

@@ -59,8 +59,13 @@ var todoList = {
     }
 };
 
-// 1. get access to display todos button
 var displayTodosButton = document.getElementById('displayTodosButton');
-console.log()
+var toggleAllButton = document.getElementById('toggleAllButton');
 
-// 2. run displayTodos method, when button is clicked
+displayTodosButton.addEventListener('click', function(){
+  todoList.displayTodos();
+})
+
+toggleAllButton.addEventListener('click', function(){
+  todoList.toggleAll();
+})
