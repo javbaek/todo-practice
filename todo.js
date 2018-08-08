@@ -37,19 +37,18 @@ var todoList = {
     toggleAll: function() {
         var totalTodos = this.todos.length;
         var completedTodos = 0;
-
-        //get number of completed todoList
+        //get number of completed todos
         for (var i = 0; i < totalTodos; i++) {
             if (this.todos[i].completed === true) {
                 completedTodos++;
             }
         }
-        //if everything is true, make everything false
+        //Case 1: if everything is true, make everything false
         if (completedTodos === totalTodos) {
             for (var i = 0; i < totalTodos; i++) {
                 this.todos[i].completed = false;
             }
-            //otherwise, make everything true
+        //Case 2: otherwise, make everything true
         } else {
             for (var i = 0; i < totalTodos; i++) {
                 this.todos[i].completed = true;
@@ -58,14 +57,12 @@ var todoList = {
         this.displayTodos();
     }
 };
-
 var displayTodosButton = document.getElementById('displayTodosButton');
 var toggleAllButton = document.getElementById('toggleAllButton');
 
 displayTodosButton.addEventListener('click', function(){
   todoList.displayTodos();
 })
-
 toggleAllButton.addEventListener('click', function(){
   todoList.toggleAll();
 })
