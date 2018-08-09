@@ -18,8 +18,8 @@
 
     <div id="main" class="content">
       <div class="inputArea">
-        <button id="addTodo" onclick="handlers.addTodo()">Add</button>
-        <input id="addTodoText" type="text" placeholder="What needs to be done?" autofocus>
+        <button id="addTodo" onclick="handlers.addTodoButton()">Add</button>
+        <input id="addTodoText" type="text" onkeydown="handlers.addTodoInput()" placeholder="What needs to be done?" autofocus>
       </div>
     </div>
 

@@ -64,9 +64,14 @@ var handlers = {
   toggleAll: function() {
     todoList.toggleAll();
   },
-  addTodo: function() {
+  addTodoButton: function() {
     var addTodoText = document.getElementById('addTodoText');
     todoList.addTodo(addTodoText.value);
     addTodoText.value = '';
+  },
+  addTodoInput: function() {
+    if(event.key === 'Enter' ) {
+      this.addTodoButton();
+    }
   }
 };
