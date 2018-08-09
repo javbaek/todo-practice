@@ -23,6 +23,22 @@ h1 {
   color: #DDDBCD;
   font-weight: lighter;
 }
+h2 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: black;
+  font-weight: lighter;
+}
+h3 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: black;
+  font-weight: lighter;
+}
 header {
   position: absolute;
   width: 100%;
@@ -37,18 +53,17 @@ header {
   text-align: center;
   background-color: #FFFFFF;
 }
-.buttons {
-  background-color: #2A568F;
+.buttonBar {
+  background-color: #A4A38F;
   border: none;
   color: white;
-  padding: 15px 25px;
+  padding: 20px 20px;
   text-align: center;
   font-size: 16px;
 }
 /*BUTTON STYLING*/
 button {
   font-weight: lighter;
-
   display: inline-block;
   border: none;
   padding: 1rem 2rem;
@@ -61,10 +76,11 @@ button {
   line-height: 1;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background 200ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-  box-shadow: 0px 5px 5px black;
+  box-shadow: 0px 4px 7px #0000009c;
+  border-radius: 5px;
 }
 button:hover {
     background: #78ACDE;
@@ -85,7 +101,7 @@ button:active {
   height:auto;
   overflow: inherit;
   border: 1px white;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;

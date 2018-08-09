@@ -57,21 +57,16 @@ var todoList = {
         this.displayTodos();
     }
 };
-var displayTodosButton = document.getElementById('displayTodosButton');
-var toggleAllButton = document.getElementById('toggleAllButton');
-
-displayTodosButton.addEventListener('click', function(){
-  todoList.displayTodos();
-})
-toggleAllButton.addEventListener('click', function(){
-  todoList.toggleAll();
-})
-
 var handlers = {
-  displayTodos: function(){
+  displayTodos: function() {
     todoList.displayTodos();
   },
-  toggleAll: function(){
+  toggleAll: function() {
     todoList.toggleAll();
+  },
+  addTodo: function() {
+    var addTodoText = document.getElementById('addTodoText');
+    todoList.addTodo(addTodoText.value);
+    addTodoText.value = '';
   }
 };

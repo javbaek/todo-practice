@@ -3,21 +3,26 @@
   <head>
     <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
     <div class="titel">
       <h1>Todolist!</h1>
     </div>
-    <div class="buttons">
-      <button id="displayTodosButton">Display Todos</button>
-      <button id="toggleAllButton">Toggle All</button>
 
-      <button onclick="handlers.displayTodos()">Display Todos</button>
-      <button onclick="handlers.toggleAll()">Toggle All</button>
+    <div class="buttonBar">
+      <div>
+        <button onclick="handlers.displayTodos()">Display Todos</button>
+        <button onclick="handlers.toggleAll()">Toggle All</button>
+      </div>
     </div>
+
     <div id="main" class="content">
-
-        <p>This will hold the todos</p>
+      <div>
+        <button onclick="handlers.addTodo()">Add</button>
+        <input id="addTodoText" type="text">
+      </div>
     </div>
+
     <script src="todo.js"></script>
   </body>
 </html>
