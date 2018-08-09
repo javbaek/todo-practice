@@ -8,6 +8,7 @@ body {
   font-size: 10px; /* the base font size is now 10 pixels high  */
   font-family: 'Open Sans', sans-serif;
   color: #212121;
+  -webkit-font-smoothing: antialiased;
 }
 p {
   font-size: 12px;
@@ -64,7 +65,6 @@ header {
 /*BUTTON STYLING*/
 button {
   font-weight: lighter;
-  display: inline-block;
   border: none;
   padding: 1rem 2rem;
   margin: 0;
@@ -82,6 +82,10 @@ button {
   box-shadow: 0px 4px 7px #0000009c;
   border-radius: 5px;
 }
+button#addTodo{
+  float: left;
+  margin-right: 20px;
+}
 button:hover {
     background: #78ACDE;
 }
@@ -94,6 +98,7 @@ button:active {
 /*Styling of content holder*/
 #main {
   min-width: 320px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   text-align: left;
@@ -106,4 +111,22 @@ button:active {
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 0px 5px 5px grey;
+}
+.inputArea {
+  -webkit-appearance: textfield;
+  -webkit-rtl-ordering: logical;
+  width: 100%;
+  display: flex;
+}
+input {
+  width: 100%;
+  min-width: 225px;
+  padding: .75rem .5rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+input:focus {
+    outline: none;
 }
