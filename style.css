@@ -85,6 +85,7 @@ button {
 button#addTodo{
   float: left;
   margin-right: 20px;
+  box-shadow: none;
 }
 button:hover {
     background: #78ACDE;
