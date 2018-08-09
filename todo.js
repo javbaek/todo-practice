@@ -73,5 +73,12 @@ var handlers = {
     if(event.key === 'Enter' ) {
       this.addTodoButton();
     }
+  },
+  changeTodo: function() {
+    var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+    var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+    todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+    changeTodoPositionInput.value = '';
+    changeTodoTextInput.value = '';
   }
 };

@@ -86,7 +86,7 @@ button {
 button:focus {
   outline: none;
 }
-button#addTodo {
+button#addTodo, button#changeTodo {
   margin-right: 20px;
   border: 0;
   border-radius: 0.5rem;
@@ -95,12 +95,12 @@ button#addTodo {
   transition: box-shadow 150ms linear, background-color 150ms linear, transform 150ms linear;
 
 }
-button#addTodo:hover{
+button#addTodo:hover, button#changeTodo:hover{
   transform: scale(1.03);
   background: #78ACDE;
   box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.30);
 }
-button#addTodo:active{
+button#addTodo:active, button#changeTodo:active{
   transform: scale(.97);
   background-color: darken($button-bg-color, 15%);
   box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.30);
@@ -112,6 +112,7 @@ button#displayTodos:active, button#toggleAll:active {
   transform: scale(.95);
   box-shadow: 0 0px 1px 1px rgba(0,0,0,.30), 0 2px 1px rgba(0,0,0,.6);
 }
+
 /*Styling of content holder*/
 #main {
   min-width: 320px;
@@ -134,10 +135,11 @@ button#displayTodos:active, button#toggleAll:active {
   -webkit-rtl-ordering: logical;
   width: 100%;
   display: flex;
+  margin-bottom: 20px;
 }
 input {
   width: 100%;
-  min-width: 225px;
+  /*min-width: 225px;*/
   padding: .75rem .5rem;
   box-sizing: border-box;
   font-size: 1rem;
@@ -146,4 +148,11 @@ input {
 }
 input:focus {
     outline: none;
+}
+.changeArea{
+  -webkit-appearance: textfield;
+  -webkit-rtl-ordering: logical;
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
 }

@@ -21,6 +21,10 @@
         <button id="addTodo" onclick="handlers.addTodoButton()">Add</button>
         <input id="addTodoText" type="text" onkeydown="handlers.addTodoInput()" placeholder="What needs to be done?" autofocus>
       </div>
+      <div class="changeArea">
+        <button id="changeTodo" onclick="handlers.changeTodo()">Change todo</button>
+        <input id="changeTodoPositionInput" type="number" placeholder="Which number of todo?">
+        <input id="changeTodoTextInput" type"text" placeholder="Changed to what?">
     </div>
 
     <script src="todo.js"></script>
