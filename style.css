@@ -63,6 +63,7 @@ header {
   text-align: center;
   font-size: 16px;
 }
+
 /*BUTTON STYLING*/
 button {
   font-weight: lighter;
@@ -93,7 +94,6 @@ button#addTodo, button#changeTodo {
   padding: 1rem 2rem;
   box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.30);
   transition: box-shadow 150ms linear, background-color 150ms linear, transform 150ms linear;
-
 }
 button#addTodo:hover, button#changeTodo:hover{
   transform: scale(1.03);
@@ -113,7 +113,7 @@ button#displayTodos:active, button#toggleAll:active {
   box-shadow: 0 0px 1px 1px rgba(0,0,0,.30), 0 2px 1px rgba(0,0,0,.6);
 }
 
-/*Styling of content holder*/
+/*Styling of content holders*/
 #main {
   min-width: 320px;
   max-width: 900px;

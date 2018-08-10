@@ -74,11 +74,16 @@ var handlers = {
       this.addTodoButton();
     }
   },
-  changeTodo: function() {
+  changeTodoButton: function() {
     var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
     var changeTodoTextInput = document.getElementById('changeTodoTextInput');
     todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
     changeTodoPositionInput.value = '';
     changeTodoTextInput.value = '';
+  },
+  changeTodoInput: function() {
+    if(event.key === 'Enter' ) {
+      this.changeTodoButton();
+    }
   }
 };
