@@ -15,11 +15,6 @@
 
     <div id="main" class="content">
 
-      <div class="topButtons">
-        <button id="displayTodos" onclick="handlers.displayTodos()">Display Todos</button>
-        <button id="toggleAll" onclick="handlers.toggleAll()">Toggle All</button>
-      </div>
-
       <div class="inputArea">
         <button id="addTodo" onclick="handlers.addTodoButton()">Add</button>
         <input id="addTodoText" type="text" onkeydown="handlers.addTodoInput()" placeholder="What needs to be done?" autofocus>
@@ -29,7 +24,12 @@
         <button id="changeTodo" onclick="handlers.changeTodoButton()">Change todo</button>
         <input id="changeTodoPositionInput" type="number" placeholder="Which number of todo?">
         <input id="changeTodoTextInput" type"text" onkeydown="handlers.changeTodoInput()" placeholder="Changed to what?">
-    </div>
+      </div>
+
+      <div class="topButtons">
+        <button id="displayTodos" onclick="handlers.displayTodos()">Display Todos</button>
+        <button id="toggleAll" onclick="handlers.toggleAll()">Toggle All</button>
+      </div>
 
     <div class="todoOutput">
 

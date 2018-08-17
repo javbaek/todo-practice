@@ -10,7 +10,6 @@ body {
   margin-top: 0;
   background-color: #DDDBCD;
   padding: 0 0px 20px 0px;
-/*  border: 2px solid #DBDBDB; */
   font-size: 10px; /* the base font size is now 10 pixels high  */
   /*font-family: 'Open Sans', sans-serif;*/
   font-family: "PT Sans", "Helvetica Neue", sans-serif;
@@ -28,7 +27,7 @@ h1 {
   font-size: 70px;
   text-align: center;
   margin: 0;
-  padding: 20px 0;
+  padding: 15px 0;
   color: #DDDBCD;
   font-weight: lighter;
 }
@@ -49,27 +48,22 @@ h3 {
   font-weight: lighter;
 }
 /*styling of top divs*/
-header {
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  border-bottom: 1px solid hsla(36, 100%, 50%, 0.1);
-}
 .titel {
   max-width: 100%;
   margin: 0 auto;
-  padding: 10px 0px;
+  padding: 0px 0px;
   text-align: center;
   background-color: #FFFFFF;
+  box-shadow: 0 1px 1px 2px rgba(0,0,0,.15), 0 2px 5px rgba(0,0,0,.2);
 }
-.bar {
+/*.bar {
   background-color: #A4A38F;
   border: none;
   color: white;
   padding: 20px 20px;
   text-align: center;
   font-size: 16px;
-}
+}*/
 
 /*BUTTON STYLING*/
 button {
@@ -78,17 +72,17 @@ button {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
-  background: #2A568F;
+  background: rgb(42,86,143);
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1;
   cursor: pointer;
   text-align: center;
-  transition: background 200ms ease-in-out, transform 150ms ease, box-shadow 100ms ease;
+  transition: background 200ms ease-in-out, transform 150ms , box-shadow 100ms ease;
+  transition: box-shadow 150ms linear, background-color 150ms linear, transform 150ms linear;
   -webkit-appearance: none;
   -moz-appearance: none;
-  box-shadow: 0 1px 1px 2px rgba(0,0,0,.20), 0 2px 5px rgba(0,0,0,.4);
   border-radius: 2px;
   min-width: 170px;
   line-height: 20px;
@@ -98,35 +92,16 @@ button {
 button:focus {
   outline: none;
 }
-button#addTodo, button#changeTodo {
-  border: 0;
-  border-radius: 2px;
-  padding: 1rem 2rem;
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.30);
-  transition: box-shadow 150ms linear, background-color 150ms linear, transform 150ms linear;
-  min-block-size: 64px;
-  text-align: center;
-  min-width: 170px;
-  margin-right: 20px;
-}
-button#addTodo:hover, button#changeTodo:hover{
+button:hover{
   transform: scale(1.03);
-  background: #78ACDE;
   box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.30);
+  background: rgb(42,86,143, 90%);
 }
-button#addTodo:active, button#changeTodo:active{
+button:active{
   transform: scale(.97);
-  background-color: darken($button-bg-color, 15%);
+  background: #003f7f;
   box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.30);
 }
-button#displayTodos:hover, button#toggleAll:hover {
-  background: #78ACDE;
-}
-button#displayTodos:active, button#toggleAll:active {
-  transform: scale(.95);
-  box-shadow: 0 0px 1px 1px rgba(0,0,0,.30), 0 2px 1px rgba(0,0,0,.6);
-}
-
 /*Styling of content holders*/
 #main {
   min-width: 320px;
@@ -166,8 +141,6 @@ input {
   font-size: 1rem;
   border-radius: 3px;
   border: 2px solid #ccc;
-
-
 }
 input:focus {
     outline: none;
@@ -177,7 +150,7 @@ input:focus {
   -webkit-rtl-ordering: logical;
   width: 100%;
   display: flex;
-  /*margin-bottom: 20px;*/
+  margin-bottom: 20px;
 }
 .todoOutput {
   margin-top: 20px;
