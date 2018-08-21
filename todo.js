@@ -71,6 +71,7 @@ var handlers = {
       this.addTodoButton();
     }
   },
+  //add functionality so user do not have to enter array numbers
   changeTodoButton: function() {
     var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
     var changeTodoTextInput = document.getElementById('changeTodoTextInput');
@@ -95,5 +96,15 @@ var handlers = {
   },
   toggleAll: function() {
     todoList.toggleAll();
+  }
+};
+var view = {
+  displayTodos: function() {
+    var todosUl = document.querySelector('ul');
+    todosUl.innerHTML = '';
+    for (var i = 0; i < todoList.todos.length; i++) {
+      var todoLi = document.createElement('li');
+      todosUl.appendChild(todoLi);
+    }
   }
 };
