@@ -145,7 +145,13 @@ input {
 input:focus {
     outline: none;
 }
-.changeArea{
+#changeTodoPositionInput {
+  max-width: 100px;
+}
+#changeTodoTextInput {
+  margin-left: 20px;
+}
+.changeArea, .deleteTodoArea, .toggleCompletedArea{
   -webkit-appearance: textfield;
   -webkit-rtl-ordering: logical;
   width: 100%;

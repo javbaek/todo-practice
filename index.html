@@ -22,7 +22,7 @@
 
       <div class="changeArea">
         <button id="changeTodo" onclick="handlers.changeTodoButton()">Change todo</button>
-        <input id="changeTodoPositionInput" type="number" placeholder="Which number of todo?">
+        <input id="changeTodoPositionInput" type="number" placeholder="Number?">
         <input id="changeTodoTextInput" type"text" onkeydown="handlers.changeTodoInput()" placeholder="Changed to what?">
       </div>
 
@@ -31,8 +31,18 @@
         <button id="toggleAll" onclick="handlers.toggleAll()">Toggle All</button>
       </div>
 
-    <div class="todoOutput">
+      <div class="deleteTodoArea">
+        <button id="deleteTodo" onclick="handlers.deleteTodo()">Delete Todo</button>
+        <input id="deleteTodoPositionInput" type="number" placeholder="Which number of todo?">
+      </div>
 
+      <div class="toggleCompletedArea">
+        <button id="toggleCompleted" onclick="handlers.toggleCompleted()">Toggle completed</button>
+        <input id="toggleCompletedPositionInput" type="number" placeholder="Which number of todo?">
+      </div>
+
+    <div class="todoOutput">
+        <output id="todoOutput" type="text">
     </div>
 
     <script src="todo.js"></script>
