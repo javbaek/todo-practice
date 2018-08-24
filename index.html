@@ -26,11 +26,6 @@
         <input id="changeTodoTextInput" type"text" onkeydown="handlers.changeTodoInput()" placeholder="Changed to what?">
       </div>
 
-      <div class="topButtons">
-        <button id="displayTodos" onclick="handlers.displayTodos()">Display Todos</button>
-        <button id="toggleAll" onclick="handlers.toggleAll()">Toggle All</button>
-      </div>
-
       <div class="deleteTodoArea">
         <button id="deleteTodo" onclick="handlers.deleteTodo()">Delete Todo</button>
         <input id="deleteTodoPositionInput" type="number" placeholder="Which number of todo?">
@@ -39,6 +34,8 @@
       <div class="toggleCompletedArea">
         <button id="toggleCompleted" onclick="handlers.toggleCompleted()">Toggle completed</button>
         <input id="toggleCompletedPositionInput" type="number" placeholder="Which number of todo?">
+        <button id="toggleAll" onclick="handlers.toggleAll()">Toggle All</button>
+
       </div>
 
     <div class="todoOutput">

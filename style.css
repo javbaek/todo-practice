@@ -72,7 +72,7 @@ h3 {
 button {
   font-weight: lighter;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   margin: 0;
   text-decoration: none;
   background: rgb(42,86,143);
@@ -91,6 +91,11 @@ button {
   line-height: 20px;
   margin-right: 20px;
   min-block-size: 64px;
+}
+button#toggleAll {
+  margin-right: 0;
+  margin-left: 20px;
+
 }
 button:focus {
   outline: none;
@@ -122,13 +127,7 @@ button:active{
   margin-bottom: 20px;
   box-shadow: 0 1px 1px 2px rgba(0,0,0,.15), 0 2px 5px rgba(0,0,0,.2);
 }
-.topButtons {
-  -webkit-appearance: textfield;
-  -webkit-rtl-ordering: logical;
-  width: 100%;
-  display: flex;
-  margin-bottom: 20px;
-}
+
 .inputArea {
   -webkit-appearance: textfield;
   -webkit-rtl-ordering: logical;
@@ -169,11 +168,20 @@ input:focus {
   border-radius: 2px;
   box-shadow: inset 0 1px 1px 2px rgba(0,0,0,0.2)
 }
+ul {
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  margin: 0px;
+}
 li {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: lighter;
   text-decoration: none;
   color: #212121;
   font-family: sans-serif;
   line-height: 1;
+  padding: .5rem .5rem;
+  display: flex;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 2px rgba(0,0,0,0.2)
 }
