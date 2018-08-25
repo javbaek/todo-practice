@@ -101,3 +101,7 @@ var view = {
     }
   }
 };
+function test(ourFunction){
+  debugger;
+  ourFunction();
+}
