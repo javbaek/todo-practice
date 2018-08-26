@@ -98,7 +98,14 @@ var view = {
       }
       todoLi.textContent = todoTextWithCompletion;
       todosUl.appendChild(todoLi);
+      todoLi.appendChild(this.createDeleteButton());
     }
+  },
+  createDeleteButton: function() {
+    var deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'deleteButton';
+    return deleteButton;
   }
 };
 function test(ourFunction){
