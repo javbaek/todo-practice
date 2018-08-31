@@ -59,15 +59,6 @@ h3 {
   background-color: #FFFFFF;
   box-shadow: 0 1px 1px 2px rgba(0,0,0,.15), 0 2px 5px rgba(0,0,0,.2);
 }
-/*.bar {
-  background-color: #A4A38F;
-  border: none;
-  color: white;
-  padding: 20px 20px;
-  text-align: center;
-  font-size: 16px;
-}*/
-
 /*BUTTON STYLING*/
 button {
   font-weight: lighter;
@@ -137,7 +128,6 @@ button:active{
 }
 input {
   width: 100%;
-  /*min-width: 225px;*/
   padding: .75rem .5rem;
   box-sizing: border-box;
   font-size: 1rem;
@@ -153,7 +143,7 @@ input:focus {
 #changeTodoTextInput {
   margin-left: 20px;
 }
-.changeArea, .deleteTodoArea, .toggleCompletedArea{
+.changeArea, .toggleCompletedArea{
   -webkit-appearance: textfield;
   -webkit-rtl-ordering: logical;
   width: 100%;
@@ -163,10 +153,8 @@ input:focus {
 .todoOutput {
   margin-top: 20px;
   width: 100%;
-  min-height: 100px;
   display: flex;
   border-radius: 2px;
-  /*box-shadow: inset 0 1px 1px 2px rgba(0,0,0,0.2)*/
 }
 ul {
   width: 100%;
@@ -174,8 +162,6 @@ ul {
   margin: 0px;
   border-radius: 2px;
   border-top: 2px solid #DDDBCD;
-
-
 }
 li {
   font-size: 2rem;
@@ -188,14 +174,11 @@ li {
   display: flow-root;
   border-radius: 2px;
   border-bottom: 2px solid #DDDBCD;
-  /*box-shadow: 0 1px 1px 2px rgba(0,0,0,0.2);*/
-  /*margin-bottom: 20px;*/
+  cursor: pointer;
 }
 button.deleteButton {
   float: right;
   margin: 0;
-  /*min-width: 142px;*/
   line-height: 20px;
   min-block-size: 64px;
-  /*min-block-size: 48px;*/
 }

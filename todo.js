@@ -66,10 +66,8 @@ var handlers = {
     }
     view.displayTodos();
   },
-  deleteTodo: function() {
-    var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
-    todoList.deleteTodos(deleteTodoPositionInput.valueAsNumber);
-    deleteTodoPositionInput.value = '';
+  deleteTodo: function(position) {
+    todoList.deleteTodos(position);
     view.displayTodos();
   },
   toggleCompleted: function() {
@@ -96,6 +94,7 @@ var view = {
       }else {
         todoTextWithCompletion = '[ ] ' + todo.todoText;
       }
+      todoLi.id = i;
       todoLi.textContent = todoTextWithCompletion;
       todosUl.appendChild(todoLi);
       todoLi.appendChild(this.createDeleteButton());
@@ -106,8 +105,26 @@ var view = {
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'deleteButton';
     return deleteButton;
+  },
+  setUpEventListeners: function() {
+    var todosUl = document.querySelector('ul');
+    var todosLi = document.querySelector('li');
+    // Get the element that was clicked on
+    todosUl.addEventListener('click', function(event) {
+      var elementClicked = event.target;
+      // Check if elementClicked is a delete button
+      if (elementClicked.className === 'deleteButton') {
+        handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+      // add functionality for toggling individual todos by clicking them
+      /*} else if (elementClicked === document.querySelector('li')) {
+        handlers.toggleAll(parseInt();*/
+      }
+    });
   }
 };
+
+view.setUpEventListeners();
+
 function test(ourFunction){
   debugger;
   ourFunction();
