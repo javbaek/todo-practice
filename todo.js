@@ -16,6 +16,7 @@ var todoList = {
         var todo = this.todos[position];
         todo.completed = !todo.completed;
     },
+
     toggleAll: function() {
         var totalTodos = this.todos.length;
         var completedTodos = 0;
@@ -70,12 +71,17 @@ var handlers = {
     todoList.deleteTodos(position);
     view.displayTodos();
   },
-  toggleCompleted: function() {
+  toggleCompleted: function(position) {
+    todoList.toggleCompleted(position);
+    view.displayTodos();
+  },
+//The old toggleCompleted function
+/*  toggleCompleted: function() {
     var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
     todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
     toggleCompletedPositionInput.value = '';
     view.displayTodos();
-  },
+  },*/
   toggleAll: function() {
     todoList.toggleAll();
     view.displayTodos();
@@ -87,6 +93,7 @@ var view = {
     todosUl.innerHTML = '';
     for (var i = 0; i < todoList.todos.length; i++) {
       var todoLi = document.createElement('li');
+      todoLi.className = 'list'
       var todo = todoList.todos[i];
       var todoTextWithCompletion = '';
       if (todo.completed === true) {
@@ -98,6 +105,8 @@ var view = {
       todoLi.textContent = todoTextWithCompletion;
       todosUl.appendChild(todoLi);
       todoLi.appendChild(this.createDeleteButton());
+      todoLi.appendChild(this.createToggleButton());
+
     }
   },
   createDeleteButton: function() {
@@ -105,6 +114,12 @@ var view = {
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'deleteButton';
     return deleteButton;
+  },
+  createToggleButton: function() {
+    var toggleButton = document.createElement('button');
+    toggleButton.textContent = 'Toggle';
+    toggleButton.className = 'toggleButton';
+    return toggleButton;
   },
   setUpEventListeners: function() {
     var todosUl = document.querySelector('ul');
@@ -115,9 +130,10 @@ var view = {
       // Check if elementClicked is a delete button
       if (elementClicked.className === 'deleteButton') {
         handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
-      // add functionality for toggling individual todos by clicking them
-      /*} else if (elementClicked === document.querySelector('li')) {
-        handlers.toggleAll(parseInt();*/
+      // add functionality for toggling individual todos by clicking them   //TODO: Janus
+      // check if element clicked is list item
+    } else if (elementClicked.className === 'toggleButton') {
+        handlers.toggleCompleted(parseInt(elementClicked.parentNode.id));
       }
     });
   }
