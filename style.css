@@ -101,6 +101,25 @@ button:active{
   background: #003f7f;
   box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.30);
 }
+button.deleteButton {
+  min-width: 4.5rem;
+  background: #820445;
+  float: right;
+  margin: 0;
+  line-height: 20px;
+  min-block-size: 64px;
+  background-image: url("./image/delete-white.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+button.toggleButton {
+  float: right;
+  margin: 0;
+  line-height: 20px;
+  min-block-size: 64px;
+  margin-right: 20px;
+}
 /*Styling of content holders*/
 #main {
   min-width: 320px;
@@ -176,17 +195,4 @@ li {
   border-radius: 2px;
   border-bottom: 2px solid #DDDBCD;
   /*cursor: pointer;*/
-}
-button.deleteButton {
-  float: right;
-  margin: 0;
-  line-height: 20px;
-  min-block-size: 64px;
-}
-button.toggleButton {
-  float: right;
-  margin: 0;
-  line-height: 20px;
-  min-block-size: 64px;
-  margin-right: 20px;
 }

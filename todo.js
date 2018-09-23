@@ -109,17 +109,18 @@ var view = {
 
     }
   },
-  createDeleteButton: function() {
-    var deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.className = 'deleteButton';
-    return deleteButton;
-  },
   createToggleButton: function() {
     var toggleButton = document.createElement('button');
     toggleButton.textContent = 'Toggle';
     toggleButton.className = 'toggleButton';
     return toggleButton;
+  },
+  createDeleteButton: function() {
+    var deleteButton = document.createElement('button');
+    deleteButton.textContent = '';
+    //deleteButton.backgroundImage = './image/delete-white.png';
+    deleteButton.className = 'deleteButton';
+    return deleteButton;
   },
   setUpEventListeners: function() {
     var todosUl = document.querySelector('ul');
