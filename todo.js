@@ -16,7 +16,6 @@ var todoList = {
         var todo = this.todos[position];
         todo.completed = !todo.completed;
     },
-
     toggleAll: function() {
         var totalTodos = this.todos.length;
         var completedTodos = 0;
@@ -52,7 +51,7 @@ var handlers = {
     }
     view.displayTodos();
   },
-  //add functionality so user do not have to enter array numbers
+  //// TODO: add functionality so user do not have to enter array numbers
   changeTodoButton: function() {
     var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
     var changeTodoTextInput = document.getElementById('changeTodoTextInput');
@@ -75,13 +74,6 @@ var handlers = {
     todoList.toggleCompleted(position);
     view.displayTodos();
   },
-//The old toggleCompleted function
-/*  toggleCompleted: function() {
-    var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
-    todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
-    toggleCompletedPositionInput.value = '';
-    view.displayTodos();
-  },*/
   toggleAll: function() {
     todoList.toggleAll();
     view.displayTodos();
@@ -95,9 +87,9 @@ var view = {
       var todoLi = document.createElement('li');
       todoLi.className = 'list'
       var todo = todoList.todos[i];
-      var todoTextWithCompletion = '';
+      var todoTextWithCompletion = ;
       if (todo.completed === true) {
-        todoTextWithCompletion = '[x] ' + todo.todoText;
+        todoTextWithCompletion = todo.todoText;
       }else {
         todoTextWithCompletion = '[ ] ' + todo.todoText;
       }
@@ -106,19 +98,17 @@ var view = {
       todosUl.appendChild(todoLi);
       todoLi.appendChild(this.createDeleteButton());
       todoLi.appendChild(this.createToggleButton());
-
     }
   },
   createToggleButton: function() {
     var toggleButton = document.createElement('button');
-    toggleButton.textContent = 'Toggle';
     toggleButton.className = 'toggleButton';
+    var toggleImage = "url('./image/check-box-white.png')"
+    toggleButton.style.backgroundImage = toggleImage;
     return toggleButton;
   },
   createDeleteButton: function() {
     var deleteButton = document.createElement('button');
-    deleteButton.textContent = '';
-    //deleteButton.backgroundImage = './image/delete-white.png';
     deleteButton.className = 'deleteButton';
     return deleteButton;
   },
@@ -132,7 +122,7 @@ var view = {
       if (elementClicked.className === 'deleteButton') {
         handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
       // add functionality for toggling individual todos by clicking them   //TODO: Janus
-      // check if element clicked is list item
+      // check if element clicked is toggle item
     } else if (elementClicked.className === 'toggleButton') {
         handlers.toggleCompleted(parseInt(elementClicked.parentNode.id));
       }

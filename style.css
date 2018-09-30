@@ -102,7 +102,7 @@ button:active{
   box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.30);
 }
 button.deleteButton {
-  min-width: 4.5rem;
+  min-width: 4rem;
   background: #820445;
   float: right;
   margin: 0;
@@ -114,11 +114,16 @@ button.deleteButton {
   background-position: center;
 }
 button.toggleButton {
+  min-width: 4rem;
   float: right;
   margin: 0;
   line-height: 20px;
   min-block-size: 64px;
   margin-right: 20px;
+  /*background-image: url("./image/check-box-white.png");*/
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /*Styling of content holders*/
 #main {
