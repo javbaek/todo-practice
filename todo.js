@@ -90,9 +90,10 @@ var view = {
       var todoText = todo.todoText;
       var todoTextWithCompletion = '';
       if (todo.completed === true) {
-        todoTextWithCompletion = '[x] ' + todoText;
+        todoTextWithCompletion = todoText;
+        todoLi.style.setProperty("text-decoration", "line-through");
       }else {
-        todoTextWithCompletion = '[ ] ' + todoText;
+        todoTextWithCompletion = todoText;
       }
       todoLi.id = i;
       todoLi.textContent = todoTextWithCompletion;
@@ -104,6 +105,7 @@ var view = {
   createToggleButton: function() {
     var toggleButton = document.createElement('button');
     toggleButton.className = 'toggleButton';
+    //var toggleImage = "url('./image/check-box-checked-white.png')"
     var toggleImage = "url('./image/check-box-white.png')"
     toggleButton.style.backgroundImage = toggleImage;
     return toggleButton;
@@ -122,7 +124,6 @@ var view = {
       // Check if elementClicked is a delete button
       if (elementClicked.className === 'deleteButton') {
         handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
-      // add functionality for toggling individual todos by clicking them   //TODO: Janus
       // check if element clicked is toggle item
     } else if (elementClicked.className === 'toggleButton') {
         handlers.toggleCompleted(parseInt(elementClicked.parentNode.id));
