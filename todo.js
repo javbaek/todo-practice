@@ -87,11 +87,12 @@ var view = {
       var todoLi = document.createElement('li');
       todoLi.className = 'list'
       var todo = todoList.todos[i];
+      var todoText = todo.todoText;
       var todoTextWithCompletion = '';
       if (todo.completed === true) {
-        todoTextWithCompletion = '[x] ' + todo.todoText;
+        todoTextWithCompletion = '[x] ' + todoText;
       }else {
-        todoTextWithCompletion = '[ ] ' + todo.todoText;
+        todoTextWithCompletion = '[ ] ' + todoText;
       }
       todoLi.id = i;
       todoLi.textContent = todoTextWithCompletion;
