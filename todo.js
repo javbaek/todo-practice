@@ -79,22 +79,26 @@ var handlers = {
     view.displayTodos();
   }
 };
+
 var view = {
   displayTodos: function() {
     var todosUl = document.querySelector('ul');
     todosUl.innerHTML = '';
+
     for (var i = 0; i < todoList.todos.length; i++) {
       var todoLi = document.createElement('li');
       todoLi.className = 'list'
       var todo = todoList.todos[i];
       var todoText = todo.todoText;
       var todoTextWithCompletion = '';
+
       if (todo.completed === true) {
         todoTextWithCompletion = todoText;
         todoLi.style.setProperty("text-decoration", "line-through");
-      }else {
+      } else {
         todoTextWithCompletion = todoText;
       }
+
       todoLi.id = i;
       todoLi.textContent = todoTextWithCompletion;
       todosUl.appendChild(todoLi);
@@ -102,6 +106,7 @@ var view = {
       todoLi.appendChild(this.createToggleButton());
     }
   },
+
   createToggleButton: function() {
     var toggleButton = document.createElement('button');
     toggleButton.className = 'toggleButton';
@@ -110,11 +115,13 @@ var view = {
     toggleButton.style.backgroundImage = toggleImage;
     return toggleButton;
   },
+
   createDeleteButton: function() {
     var deleteButton = document.createElement('button');
     deleteButton.className = 'deleteButton';
     return deleteButton;
   },
+
   setUpEventListeners: function() {
     var todosUl = document.querySelector('ul');
     var todosLi = document.querySelector('li');
