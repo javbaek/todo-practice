@@ -6,37 +6,51 @@
   </head>
 
   <body>
-    <div class="titel">
-      <h1>Todolist!</h1>
-    </div>
-
-    <div class="bar">
-
-    </div>
-
-    <div id="main" class="content">
-
-      <div class="inputArea">
-        <button id="addTodo" onclick="handlers.addTodoButton()">Add</button>
-        <input id="addTodoText" type="text" onkeydown="handlers.addTodoInput()" placeholder="What needs to be done?" autofocus>
+    <div class="container">
+      <div class="row">
+        <div id="titelBar" class="col-12">
+          <h1 id="titeltext">Todolist!</h1>
+        </div>
       </div>
 
-      <div class="changeArea">
-        <button id="changeTodo" onclick="handlers.changeTodoButton()">Change todo</button>
-        <input id="changeTodoPositionInput" type="number" placeholder="Number?">
-        <input id="changeTodoTextInput" type"text" onkeydown="handlers.changeTodoInput()" placeholder="Changed to what?">
+      <div class="bar">
+
       </div>
 
-      <div class="toggleCompletedArea">
-        <button id="toggleAll" onclick="handlers.toggleAll()">Toggle All</button>
+      <div id="main" class="container">
+        <div id="inputArea" class="row">
+          <div class="col-2">
+            <button id="addTodo" onclick="handlers.addTodoButton()">Add</button>
+          </div>
+          <div class="col-10">
+            <input id="addTodoText" type="text" onkeydown="handlers.addTodoInput()" placeholder="What needs to be done?" autofocus>
+          </div>
+        </div>
+
+        <div id="changeArea" class="row">
+          <div class="col-2">
+            <button id="changeTodo" onclick="handlers.changeTodoButton()">Change todo</button>
+          </div>
+          <div class="col-5">
+            <input id="changeTodoPositionInput" type="number" placeholder="Number?">
+          </div>
+          <div class="col-5">
+            <input id="changeTodoTextInput" type"text" onkeydown="handlers.changeTodoInput()" placeholder="Changed to what?">
+          </div>
+        </div>
+
+        <div id="toggleCompletedArea" class="row">
+          <div class="col-2">
+            <button id="toggleAll" onclick="handlers.toggleAll()">Toggle All</button>
+          </div>
+        </div>
+
+      <div id="todoOutput" class="row">
+          <ul class="unorderedList">
+
+          </ul>
       </div>
-
-    <div class="todoOutput">
-        <ul class="unorderedList">
-
-        </ul>
     </div>
-
     <script src="todo.js"></script>
   </body>
 </html>
