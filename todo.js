@@ -87,7 +87,7 @@ var view = {
 
     for (var i = 0; i < todoList.todos.length; i++) {
       var todoLi = document.createElement('li');
-      todoLi.className = 'list'
+      todoLi.className = 'col-12'
       var todo = todoList.todos[i];
       var todoText = todo.todoText;
       var todoTextWithCompletion = '';
@@ -109,16 +109,20 @@ var view = {
 
   createToggleButton: function() {
     var toggleButton = document.createElement('button');
-    toggleButton.className = 'toggleButton';
-    //var toggleImage = "url('./image/check-box-checked-white.png')"
-    var toggleImage = "url('./image/check-box-white.png')"
+    toggleButton.id = 'toggleButton';
+    toggleButton.className = "col-2";
+    var toggleImage = "url('./image/check-box-checked-white.png')"
+    //var toggleImage = "url('./image/check-box-white.png')"
     toggleButton.style.backgroundImage = toggleImage;
     return toggleButton;
   },
 
   createDeleteButton: function() {
     var deleteButton = document.createElement('button');
-    deleteButton.className = 'deleteButton';
+    deleteButton.id = 'deleteButton';
+    deleteButton.className = "col-2";
+    var deleteImage = "url('./image/delete-white.png')"
+    deleteButton.style.backgroundImage = deleteImage;
     return deleteButton;
   },
 
@@ -129,10 +133,10 @@ var view = {
     todosUl.addEventListener('click', function(event) {
       var elementClicked = event.target;
       // Check if elementClicked is a delete button
-      if (elementClicked.className === 'deleteButton') {
+      if (elementClicked.id === 'deleteButton') {
         handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
       // check if element clicked is toggle item
-    } else if (elementClicked.className === 'toggleButton') {
+    } else if (elementClicked.id === 'toggleButton') {
         handlers.toggleCompleted(parseInt(elementClicked.parentNode.id));
       }
     });
